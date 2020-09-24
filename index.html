@@ -3,21 +3,42 @@
     <head>
         <title>Search</title>
         <style>
-           #search > a{         /* This is called child selector in css*/
-               float: right;
-               color: red;
-               color: blue;
-           }
+            #search > a{
+                float: right;
+                text-decoration: none;
+                margin: 10px;
+                color: black;
+                font-family: sans-serif;
+                font-size: 13px;
+            }
+            #search{
+                padding: 10px 125px;
+            }
+            #search > a:hover{
+                text-decoration: underline;
+            }
+            #image{
+                display: block;
+                text-align: center;
+                margin: 9.5%;
+            }
         </style>
     </head>
     <body>
+        <main>
+        <nav>
         <div id="search">
-            <a href="ImageSearch.html">Image Search</a>
-            <a href="GoogleAdvancedSearch.html">Advanced Search</a>
+            <a href="GoogleAdvancedSearch.html">AdvancedSearch</a>
+            <a href="ImageSearch.html">ImageSearch</a>
         </div>
-        <form action="https://google.com/search">
+       </nav>
+        <div id="image">
+            <img src="google.png">
+        </div>
+        <!--<form action="https://google.com/search">
             <input type="text" name="q">
             <input type="submit" value="Google Search">
-        </form>
+        </form>-->
+       </main>
     </body>
 </html>
