@@ -2,6 +2,8 @@
 <html lang="en">
     <head>
         <title>Search</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
         <style>
             #search > a{
                 float: right;
@@ -16,13 +18,60 @@
             }
             #search > a:hover{
                 text-decoration: underline;
+                color: #444444;
             }
             #image{
                 display: block;
                 text-align: center;
-                margin: 9.5%;
+                margin-top: 9.5%;
             }
-        </style>
+            .container{
+                margin-top: 20px;
+                margin-left: 28%;
+                position: relative;
+                height: 40px;
+                width: 605px;
+                border: 1px solid #dddddd;
+                border-radius: 50px;
+                border-width: thin;
+                }
+            .searchbar{
+                border: none;
+                position: relative;
+                height: 100%;
+                width: 100%;
+                border-radius: 50px;
+            }
+            .searchbar:focus{
+                border: none;
+                outline: none;
+            }
+            .material-icons{
+                color: #aaaaaa;
+                font-size: 21px;
+                margin: 7px;
+            }
+            .container:hover{
+                box-shadow: 0 0 1px 2px #eeeeee;
+            }
+            .searchbuttons{
+                position: relative;
+                left: 45%;
+            }
+            #s_button{
+                width: 130px;
+                height: 35px;
+                color: #666666;
+                border: none;
+                font-size: 14px;
+                border-radius: 5px;
+            }
+            #s_button:hover{
+                color: #222222;
+                box-shadow: 0 0 1px 1px #cccccc;
+                border-radius: 5px;
+            }
+           </style>
     </head>
     <body>
         <main>
@@ -35,10 +84,21 @@
         <div id="image">
             <img src="google.png">
         </div>
-        <!--<form action="https://google.com/search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
-        </form>-->
+        <form action="https://google.com/search">
+            <div class="container">
+                <table>
+                    <td>
+                <span class="material-icons">search</span></td>
+                <td>
+                    <input type="text" name="q" placeholder="Search Google or type a URL" class="searchbar" size="75">
+                </td>   
+                </table>   
+                </div>
+            <br><br>
+            <div class="searchbuttons">
+                <input type="submit" value="Google Search" id="s_button">
+            </div>
+        </form>
        </main>
     </body>
 </html>
