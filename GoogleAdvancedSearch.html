@@ -67,10 +67,79 @@
                 font-size: 13px;
                 color: #777;
             }
-            label{
+            .first{
                 position: absolute;
                 margin-top: 210px;
                 margin-left: 35px;
+                font-size: 14px;
+            }
+            .forfirst{
+                position: absolute;
+                margin: 210px;
+                margin-left: 15%;   
+                border: 1px solid #ccc;
+                display: inline;
+            }
+            .forfirst:hover{
+                border-color: rgb(84, 84, 228);
+                box-shadow: 1px 1px 2px 2px #eeeeee;
+            }
+            input{
+                border: none;
+            }
+            input:focus{
+                border: none;
+                outline: none;
+            }
+            .firsttext{
+                position: absolute;
+                margin: 205px;
+                margin-left: 60%;
+                font-size: 11px;
+                color: #666;
+                display: block;
+            }
+            #second{
+                margin-top: 260px;
+            }
+            #forsecond{
+                margin-top: 260px;
+            }
+            #secondtext{
+                margin-top: 255px;
+            }
+            #third{
+                margin-top: 310px;
+            }
+            #forthird{
+                margin-top: 310px;
+            }
+            #thirdtext{
+                margin-top: 305px;
+            }
+            #fourth{
+                margin-top: 360px;
+            }
+            #forfourth{
+                margin-top: 360px;
+            }
+            #fourthtext{
+                margin-top: 355px;
+            }
+            .submitbutton{
+                position: absolute;
+                margin-top: 470px;
+                margin-left: 40%;
+            }
+            #submitbuttons{
+                width: 120px;
+                height: 30px;
+                color: white;
+                font-size: 11px;
+                background-color: #4d90fe;
+            }
+            #submitbuttons:hover{
+                background-color: #4586ee;
             }
         </style>
     </head>
@@ -84,10 +153,40 @@
                 <p>Advanced Search</p>
             </div>
             <hr>
-            <form class="input-fields">
+            <form class="input-fields" action="https://google.com/search">
                 <p id="start">Find pages with...</p>
                 <p id="end"><strong>To do this in the search box.</strong></p>
-                <label>all these words:</label>
+                <label class="first">all these words:</label>
+                    <div class="forfirst">
+                        <input type="text" name="q" for="first" size="80">
+                    </div>
+                    <div class="firsttext">
+                        <p>Type the important words: <span style="font-family: monospace;">tri-colour rat terrier</span></p>
+                    </div>
+                    <label class="first" id="second">this exact word or phrase:</label>
+                    <div class="forfirst" id="forsecond">
+                        <input type="text" name="q" for="second" size="80">
+                    </div>
+                    <div class="firsttext" id="secondtext">
+                        <p>Put exact words in quotes <span style="font-family: monospace;">"rat terrier"</span></p>
+                    </div> 
+                    <label class="first" id="third">this exact word or phrase:</label>
+                    <div class="forfirst" id="forthird">
+                        <input type="text" name="q" for="second" size="80">
+                    </div>
+                    <div class="firsttext" id="thirdtext">
+                        <p>Type OR between all the words you want: <span style="font-family: monospace;">miniature OR standard</span></p>
+                    </div> 
+                    <label class="first" id="fourth">none of these words:</label>
+                    <div class="forfirst" id="forfourth">
+                        <input type="text" name="q" for="second" size="80">
+                    </div>
+                    <div class="firsttext" id="fourthtext">
+                        <p>Put a minus sign just before words that you don't want:<span style="font-family: monospace;">-rodent, -"Jack Russell"</span></p>
+                    </div> 
+                    <div class="submitbutton">
+                        <input type="submit" value="Advanced Search" id="submitbuttons">
+                    </div>
             </form>
         </main>
     </body>
